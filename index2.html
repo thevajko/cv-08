@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function addHeaders(elementID){
+            // get target element
+            let target = document.getElementById(elementID);
+            // generate headers
+            for (let i = 0; i < 5; i++) {
+                // create header element
+                let h = document.createElement('h3');
+                // put inside heading
+                h.innerText = "Nadpis č." + (i +1);
+                // append created HTML element into target
+                target.appendChild(h);
+            }
+        }
+        function factorial(num) {
+            if (num < 1) {
+                return 1;
+            } else {
+                return (num * factorial(num - 1));
+            }
+        }
+
+        // after page load must be dane this way, defer will not work
+        window.onload = () => {
+            addHeaders('nadpise');
+
+            // on button click
+            document.getElementById('fac-btn').onclick = () => {
+                // calculate factorial
+                let result =  factorial(document.getElementById('fac-base').value);
+                // output the result
+                document.getElementById('fac-res').innerText = result;
+            };
+        }
+    </script>
+</head>
+<body>
+    <div id="nadpise"></div>
+    <div>
+        <input type="text" id="fac-base">
+        <button id="fac-btn">Calculate</button>
+        <div id="fac-res">
+        </div>
+    </div>
+</body>
+</html>
