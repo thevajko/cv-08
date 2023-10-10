@@ -117,7 +117,7 @@ class Pexeso  {
             return;
         } else {
             // if is second, first check if cards match
-            if (this.#cardOne.isSame(card)) {
+            if (this.#cardOne.symbol == card.symbol) {
                 // if matched, then set cards as guessed
                 this.#cardOne.guessed = true;
                 card.guessed = true;
@@ -145,6 +145,7 @@ class Pexeso  {
             this.switchPlayers();
         }
     }
+
 }
 
 export {Pexeso};

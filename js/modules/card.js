@@ -35,15 +35,6 @@ class Card {
         }
     }
 
-    /**
-     * Returns true if both cards have the same symbol
-     * @param card
-     * @returns {boolean}
-     */
-    isSame(card){
-        return card.symbol == this.#symbol;
-    }
-
     get symbol(){
         return this.#symbol;
     }
