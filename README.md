@@ -1,4 +1,5 @@
-# VAII Cvičenie 05
+# VAII Cvičenie 08
+
 Momentálne je otvorená branch __SOLUTION__, ktorá obsahuje riešenie. _Štartér_ obsahuje branch  __MAIN__.
 
 ## Úlohy
@@ -6,11 +7,11 @@ Momentálne je otvorená branch __SOLUTION__, ktorá obsahuje riešenie. _Štart
 1. Jednoduchá algoritmizácia
    1. Vytvorte funkciu, ktorá bude schopná do vybratého elementu dynamicky vygenerovať 5 nadpisov. V texte nadpisu sa bude nachádzať jeho číslo.
    2. Vytvorte funkciu na výpočet faktoriálu. 
-      3. Doplňte do stránky ovládacie prvky tak, aby sa dal základ pre faktoriál vyplniť v input elemente, tlačidlo pre spustenie výpočtu a zobrazenie výsledku.
+      * Doplňte do stránky ovládacie prvky tak, aby sa dal základ pre faktoriál vyplniť v input elemente, tlačidlo pre spustenie výpočtu a zobrazenie výsledku.
 2. Hra pexeso
    1. Naprogramujte jednoduchú hru pexesa pre dvoch hráčov s možnosťou začať hru odnova a zobrazením aktuálneho skóre.
       1. __Hru riešte pomocou OOP, nie funkcionálným štýlom.__ 
-      2Použite __JS modules__
+      2. Použite __JS modules__
 
 ## Ako nájsť branch môjho cvičenia?
 Pokiaľ sa chcete dostať k riešeniu z cvičenia je potrebné otvoriť si príslušnú _branch_, ktorej názov sa skladá:
