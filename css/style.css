@@ -1,0 +1,22 @@
+#board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    gap: 3px;
+}
+
+#board > div {
+    width: 80px;
+    height: 80px;
+    color: Indigo;
+    background-color: orange;
+}
+
+#score {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#start {
+    margin-top: 10px;
+}
