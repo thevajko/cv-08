@@ -3,11 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="js/skript.js"></script>
+    <script>
+        window.onload = () => {
+            obsah = document.getElementById('obsah')
+            for (let i = 0; i < 5; i++) {
+                let header = document.createElement('h1')
+                header.innerText = "Nadpis"
+                obsah.appendChild(header)
+            }
+
+        }
+    </script>
 </head>
 <body>
-<input type="number" id="cislo" value="1"><button id="pocitaj">Počítaj</button>
-<div id="obsah"></div>
-<div id="vysledok"></div>
+<div id="obsah">
+
+</div>
 </body>
 </html>
