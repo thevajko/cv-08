@@ -1,4 +1,4 @@
-import  {Card} from "./card.js";
+import {Card} from "./card.js";
 import {Player} from "./player.js";
 
 class Pexeso  {
@@ -42,9 +42,9 @@ class Pexeso  {
         this.#players[0].score = 0;
         this.#players[1].score = 0;
 
-        // pick the    second player
+        // pick the second player
         this.#actualPlayer = this.#players[1];
-        // switch to fist player and redraw score
+        // switch to the first player and redraw score
         this.switchPlayers();
 
         // get container element for cards
@@ -54,13 +54,13 @@ class Pexeso  {
 
         // for each symbol in array do this:
         Pexeso.cardSymbols.forEach( symbol => {
-            // there are two cards fpr each symbol
+            // there are two cards for each symbol
             for (let i = 0; i <2 ; i++) {
                 // create card
                 let newCard = new Card(symbol);
                 // add card to all cards array
                 this.#cards.push(newCard);
-                // add card HTML element into DOM
+                // add card HTML element to DOM
                 board.appendChild(newCard.element);
                 newCard.hide(); // hide card
                 newCard.element.onclick =  () => {

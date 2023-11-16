@@ -13,7 +13,7 @@ class Card {
      */
     constructor(cardSymbol) {
         this.#symbol = cardSymbol;
-        this.#element =  document.createElement("div");
+        this.#element = document.createElement("div");
         this.#element.setAttribute('style', 'text-align:center;')
     }
 
@@ -40,7 +40,7 @@ class Card {
         return this.#symbol;
     }
     show(){
-        // turned up card, the showed one, is showing it symbol
+        // turn up card (show its symbol)
         this.#element.innerHTML = `<i class="fas fa-${this.#symbol} fa-3x" style="margin-top: 15px"></i>`;
     }
 
