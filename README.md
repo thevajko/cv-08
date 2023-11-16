@@ -8,12 +8,14 @@ Momentálne je otvorená branch __MAIN__, ktorá obsahuje _štartér_. Riešenie
     1. Vytvorte funkciu, ktorá bude schopná do vybratého elementu vygenerovať 5 nadpisov. V texte nadpisu sa bude
        nachádzať jeho číslo.
     2. Vytvorte funkciu na výpočet faktoriálu.
-        * Doplňte do stránky ovládacie prvky vstupné pole pre vloženie číslo, ktorého faktoriál chcete vypočítať a
+        * Doplňte do stránky ovládacie prvky vstupné pole pre vloženie čísla, ktorého faktoriál chcete vypočítať a
           tlačidlo pre zobrazenie výsledku.
+
+
 2. Hra pexeso
-   Naprogramujte jednoduchú hru pexeso pre dvoch hráčov s možnosťou začať hru odnova a zobrazením aktuálneho skóre.
-    * __Hru riešte pomocou OOP.__
-    * Použite __JS moduly.__
+   Naprogramujte jednoduchú hru pexeso pre dvoch hráčov, ktorá bude zobrazovať aktuálne skóre. Hra bude mať možnosť začať hru odznova
+   * Hru riešte pomocou __OOP.__
+   * Použite __JS moduly.__
 
 Postup:
 1. Preštudujte si štruktúru štartéra projektu a hlavne súbory `index.html` a `css\style.css`.
@@ -38,5 +40,3 @@ Pokiaľ sa chcete dostať k riešeniu z cvičenia je potrebné otvoriť si prís
 __MIESTNOST__ + "-" + __HODINA ZAČIATKU__ + "-" + __DEN__
 
 Ak teda navštevujete cvičenie pondelok o 08:00 v RA323, tak sa branch bude volať: __RA323-08-PON__
-vičenie používa framework vaiicko dostupný na
-repe [https://github.com/thevajko/vaiicko](https://github.com/thevajko/vaiicko)
