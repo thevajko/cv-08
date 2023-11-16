@@ -6,5 +6,20 @@ class Pexeso {
     static cardSymbols = ['yin-yang', 'tractor', 'truck-monster', 'truck', 'walking', 'ambulance', 'bicycle',
         'bus', 'car', 'caravan', 'motorcycle', 'shuttle-van', 'tram', 'plane', 'subway'];
 
+    #cardOne = null
+    #cardTwo = null
+    #cards = []
+    #players = []
+    #currentPlayer = null
+
+    constructor() {
+        this.#players = [
+            new Player(1),
+            new Player(2)
+        ]
+        document.getElementById('start').onclick = () => {
+            this.newGame()
+        }
+    }
 
 }

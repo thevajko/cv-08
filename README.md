@@ -16,7 +16,7 @@ Momentálne je otvorená branch __MAIN__, ktorá obsahuje _štartér_. Riešenie
     * Použite __JS moduly.__
 
 Postup:
-1. Preštudujte si štruktúru štartéra projektu a hlavne súbory `index.php` a `css\style.css`.
+1. Preštudujte si štruktúru štartéra projektu a hlavne súbory `index.html` a `css\style.css`.
 2. Vytvorte triedu `Player` s privátnymi atribútmi `number` a `score`. Vytvorte k nim _get_ a _set_ metódy. Vytvorte aj konštruktor s parametrom `playerNumber`.
 3. Vytvorte triedu `Card`. Bude mať atribúty `symbol`, `element`, `guessed`. Vytvorte k nim _set_ a _get_ metódy.
     * Vytvorte konštruktor. Čo bude jeho parametrom?
