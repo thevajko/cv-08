@@ -19,7 +19,7 @@ class Pexeso  {
     // array of players playing the game
     #players = [];
 
-    #actualPlayer = null;
+    #currentPlayer = null;
 
     constructor() {
         // just only create array of players
@@ -43,7 +43,7 @@ class Pexeso  {
         this.#players[1].score = 0;
 
         // pick the second player
-        this.#actualPlayer = this.#players[1];
+        this.#currentPlayer = this.#players[1];
         // switch to the first player and redraw score
         this.switchPlayers();
 
@@ -83,14 +83,14 @@ class Pexeso  {
      */
     switchPlayers() {
         // change colors and switch players
-        if (this.#actualPlayer == this.#players[0]) {
+        if (this.#currentPlayer == this.#players[0]) {
             document.getElementById("player1").style.color = "black";
             document.getElementById("player2").style.color = "green";
-            this.#actualPlayer = this.#players[1];
+            this.#currentPlayer = this.#players[1];
         } else {
             document.getElementById("player1").style.color = "green";
             document.getElementById("player2").style.color = "black";
-            this.#actualPlayer = this.#players[0];
+            this.#currentPlayer = this.#players[0];
         }
         // update score
         document.getElementById("player1_guessed").innerText = this.#players[0].score;
@@ -125,7 +125,7 @@ class Pexeso  {
                 this.#cardOne = null;
                 this.#cardTwo = null;
                 // increase player score
-                this.#actualPlayer.score += 1;
+                this.#currentPlayer.score += 1;
             } else {
                 // if not then set second card
                 // player must be unable to select other carts while
