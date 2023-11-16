@@ -1,5 +1,5 @@
 /**
- * Represents one card used in game pexeso
+ * Represents one card used in game
  */
 class Card {
 
@@ -26,7 +26,7 @@ class Card {
     }
 
     /**
-     * If setting true, opacity of card element will be changed to 30%
+     * If is set to true, opacity of card element will be changed to 30%
      * @param value
      */
     set guessed(value) {

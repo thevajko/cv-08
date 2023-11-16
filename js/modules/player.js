@@ -1,5 +1,5 @@
 /**
- * Simple class that represents player, so game do not lost track of player score and what players
+ * Class that represents a player, so game do not lost track of player score
  * plays game
  */
 class Player {

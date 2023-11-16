@@ -1,16 +1,16 @@
 import {Card} from "./card.js";
 import {Player} from "./player.js";
 
-class Pexeso  {
+class Pexeso {
 
     /**
-     * Array consists of icon to be used in the game. If you want mode cards in the game, add them here as values
+     * Array consists of icons in the game. If you want mode cards in the game, add them here
      */
     static cardSymbols = ['yin-yang', 'tractor', 'truck-monster', 'truck', 'walking', 'ambulance', 'bicycle', 'bus', 'car', 'caravan', 'motorcycle', 'shuttle-van', 'tram', 'plane', 'subway'];
 
-    // card that is picket first, and it used as mark, its player selected second card
+    // the card that picked as the first
     #cardOne = null;
-    // only used as mark, when both card are showing, we do not want user to be able in this time to turn up another card
+    // we do not want user to be able in this time to turn up another card
     #cardTwo = null;
 
     // all cards in game
@@ -22,12 +22,12 @@ class Pexeso  {
     #currentPlayer = null;
 
     constructor() {
-        // just only create array of players
+        // create array of players
         this.#players = [
             new Player(1),
             new Player(2)
         ];
-        // hook on clicking restart button
+        // handle game restart button
         document.getElementById("start").onclick = () => {
             this.newGame();
         }
@@ -53,16 +53,16 @@ class Pexeso  {
         board.innerHTML = "";
 
         // for each symbol in array do this:
-        Pexeso.cardSymbols.forEach( symbol => {
+        Pexeso.cardSymbols.forEach(symbol => {
             // there are two cards for each symbol
-            for (let i = 0; i <2 ; i++) {
+            for (let i = 0; i < 2; i++) {
                 // create card
                 let newCard = new Card(symbol);
                 // add card to all cards array
                 this.#cards.push(newCard);
                 // add card HTML element to DOM
                 board.appendChild(newCard.element);
-                newCard.element.onclick =  () => {
+                newCard.element.onclick = () => {
                     // do card turning on click
                     this.turnCard(newCard);
                 }
@@ -72,13 +72,13 @@ class Pexeso  {
         for (let i = 0; i < board.children.length * 5; i++) {
             // pick random index
             let number = Math.floor(Math.random() * board.children.length);
-            // pick card by index and put it as first child of board
+            // pick card by index and put it as first child of the board
             board.prepend(board.children.item(number));
         }
     }
 
     /**
-     * Switch players and redraw score and color of active player
+     * Switch players, redraw score and change color of active player
      */
     switchPlayers() {
         // change colors and switch players
@@ -100,22 +100,22 @@ class Pexeso  {
      * Turn a card
      * @param card
      */
-    turnCard(card){
+    turnCard(card) {
 
         // picked card is already guessed, so stop
         if (card.guessed) return;
-        // if both card are turned, player cannot pick another card
+        // if both card are turned up, player cannot pick another card
         if (this.#cardTwo != null) return;
 
-        // turn picked card
+        // turn up picked card
         card.show();
 
         if (this.#cardOne == null) {
-            // it is just first card
+            // it is just the first card
             this.#cardOne = card;
             return;
         } else {
-            // if is second, first check if cards match
+            // if is the second one, check if cards match
             if (this.#cardOne.symbol == card.symbol) {
                 // if matched, then set cards as guessed
                 this.#cardOne.guessed = true;
@@ -126,21 +126,21 @@ class Pexeso  {
                 // increase player score
                 this.#currentPlayer.score += 1;
             } else {
-                // if not then set second card
-                // player must be unable to select other carts while
-                // different card are showing for few moments
+                // if the cards don't match, then set the second card
+                // player must not be able to select another card
+                // while the cards are shown for one second
                 this.#cardTwo = card;
 
-                setTimeout(()=> {
-                    // set timeout, when cards will be hidden
+                setTimeout(() => {
+                    // set timeout for hiding the cards
                     this.#cardOne.hide();
                     card.hide();
 
                     this.#cardOne = null;
                     this.#cardTwo = null;
-                } , 1000);
+                }, 1000);
             }
-            // switch players after one pick up two cards
+            // switch players after two cards were turned up
             this.switchPlayers();
         }
     }
