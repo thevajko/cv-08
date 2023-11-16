@@ -62,7 +62,6 @@ class Pexeso  {
                 this.#cards.push(newCard);
                 // add card HTML element to DOM
                 board.appendChild(newCard.element);
-                newCard.hide(); // hide card
                 newCard.element.onclick =  () => {
                     // do card turning on click
                     this.turnCard(newCard);
