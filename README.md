@@ -16,8 +16,8 @@ Momentálne je otvorená branch __MAIN__, ktorá obsahuje _štartér_. Riešenie
     * Použite __JS moduly.__
 
 Postup:
-1. Preštudujte si štruktúru štartéra projektu a hlavne súbory `index.php` a `css\style.css`.
-2. Vytvorte triedu `Player` s privátnymi atribútmi `number` a `score`. Vytvorte k nim _get_ a _set_ metódy. Vytvorte aj konštruktor s parametrom `playerNumber`.
+1. Preštudujte si štruktúru štartéra projektu a hlavne súbory `index.html` a `css\style.css`.
+2. Vytvorte triedu `Player` s privátnymi atribútmi `number` a `score`. Vytvorte k nim _get_ a _set_ metódy. Vytvorte aj konštruktor s parametrom `number`.
 3. Vytvorte triedu `Card`. Bude mať atribúty `symbol`, `element`, `guessed`. Vytvorte k nim _set_ a _get_ metódy.
     * Vytvorte konštruktor. Čo bude jeho parametrom?
     * Vytvorte metódy `show()` a `hide()`, ktoré budú kartu odkrývať a skrývať.
@@ -26,8 +26,8 @@ Postup:
     * Vytvorte konštruktor. Čo bude jeho obsahom?
     * Vytvorte metódu `newGame()`. Čo bude metóda robiť?
     * Vytvorte metódu `switchPlayers()`, ktorá bude prepínať hráčov.
-    * Vytvorte metódu `˙turnCard()`, ktorá bude implementovať logiku odkrývania a skrývania kariet.
-5. Zmeňte implementáciu metódy `geussed` v triede `Card`, tak, aby správne zaznamenala, či bola karta uhádnuté.
+    * Vytvorte metódu `turnCard()`, ktorá bude implementovať logiku odkrývania a skrývania kariet.
+5. Zmeňte implementáciu metódy `guessed()` v triede `Card`, tak, aby správne zaznamenala, či bola karta uhádnuté.
 6. V súbore `main.js` naimportujte modul `pexeso.js` a hru spustite.
 
 
