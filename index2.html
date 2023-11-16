@@ -7,7 +7,8 @@
         "use strict";
         window.onload = function () {
             document.getElementById('pocitaj').addEventListener('click', () => {
-                let n = document.getElementById()
+                let n = document.getElementById('cislo').value;
+                document.getElementById('vysledok').innerText = faktorial(n);
             })
             // for (let i = 0; i < 5; i++) {
             //     let el = document.getElementById('obsah');
@@ -30,5 +31,6 @@
 <body>
 <input type="number" id="cislo" value="1"><button id="pocitaj">Počítaj</button>
 <div id="obsah"></div>
+<div id="vysledok"></div>
 </body>
 </html>
