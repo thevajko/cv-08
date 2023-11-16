@@ -5,8 +5,8 @@
 class Player {
     #number;
     #score = 0;
-    constructor(playerNumber) {
-        this.#number = playerNumber;
+    constructor(number) {
+        this.#number = number;
     }
 
     get number() {

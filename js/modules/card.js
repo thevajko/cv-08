@@ -9,10 +9,10 @@ class Card {
 
     /**
      * Card needs to know its symbol
-     * @param cardSymbol
+     * @param symbol
      */
-    constructor(cardSymbol) {
-        this.#symbol = cardSymbol;
+    constructor(symbol) {
+        this.#symbol = symbol;
         this.#element = document.createElement("div");
         this.#element.setAttribute('style', 'text-align:center;')
     }
