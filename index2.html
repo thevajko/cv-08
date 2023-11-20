@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    window.onload = function () {
+        for (let i = 0; i < 5; i++) {
+            let h1 = document.createElement("h1")
+            h1.innerText = "Nadpis " + (i + 1)
+            document.getElementById("obsah").appendChild(h1)
+        }
+    }
+</script>
+<body>
+<div id="obsah">
+
+</div>
+</body>
+</html>
