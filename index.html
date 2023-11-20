@@ -20,8 +20,22 @@
         }
 
         function faktorial(cislo) {
-
+            let final = 1;
+            while (cislo >= 1) {
+                final = final * cislo;
+                cislo --;
+            }
+            return final;
         }
+
+        let fakIn = document.getElementById("faktoral-cislo");
+        let fakBtn = document.getElementById("faktorial-pocitaj");
+        let fakVys = document.getElementById("faktorial-vysledok");
+        fakBtn.onclick = () => {
+            // ziskaj s inputu.value hodnotu
+            // vyrataj faktorial
+            // vloz vysledok do elementu pre zobrazenie vysledku
+        };
 
     </script>
 </head>
