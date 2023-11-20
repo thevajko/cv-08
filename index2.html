@@ -5,15 +5,29 @@
     <title>Title</title>
 </head>
 <script>
-    window.onload = function () {
-        for (let i = 0; i < 5; i++) {
-            let h1 = document.createElement("h1")
-            h1.innerText = "Nadpis " + (i + 1)
-            document.getElementById("obsah").appendChild(h1)
+    function factorial(n) {
+        f = 1;
+        for (let i = 1; i <= n; i++) {
+            f *= i
         }
+        return f
+    }
+
+    window.onload = function () {
+        document.getElementById("vypocet").addEventListener('click', function (){
+            let cislo = document.getElementById("cislo").value
+            document.getElementById("obsah").innerText = factorial(cislo)
+        })
+        document.getElementById("obsah").innerText = factorial(8)
+        // for (let i = 0; i < 5; i++) {
+        //     let h1 = document.createElement("h1")
+        //     h1.innerText = "Nadpis " + (i + 1)
+        //     document.getElementById("obsah").appendChild(h1)
+        // }
     }
 </script>
 <body>
+<input type="number" id="cislo" value="1" min="1"><button id="vypocet">Vypočítaj</button>
 <div id="obsah">
 
 </div>
