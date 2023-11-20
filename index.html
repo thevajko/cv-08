@@ -8,6 +8,19 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script type="module"  src="js/main.js" defer></script>
+    <script >
+        function generuj(idecko){
+            let element = document.getElementById(idecko);
+
+            for (let i = 0; i < 5; i++) {
+                let h1 = document.createElement("h1");
+                h1.innerText = "nadpis " + i;
+                element.append(h1);
+            }
+        }
+        document.addEventListener("onload", () => generuj("score"));
+
+    </script>
 </head>
 <body>
 <div id="score">
