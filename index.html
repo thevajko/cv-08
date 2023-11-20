@@ -28,11 +28,30 @@
         }
 
 
-        window.addEventListener("load", () => generuj("score"));
+        window.addEventListener("load", () => {
+            generuj("score");
+
+            let input = document.getElementById("f_value");
+            let btn = document.getElementById("f_btn");
+            let result = document.getElementById("f_return");
+
+            btn.onclick = () => {
+                // ziskam hodnotu z inputu
+                // vyratam faktorial
+                // zapisem vysledok do result
+            };
+
+
+        });
 
     </script>
 </head>
 <body>
+<div>
+    <input type="text" id="f_value">
+    <button id="f_btn">pocitaj</button>
+    <div id="f_return"></div>
+</div>
 <div id="score">
     <div id="player1">
         Hráč 1:
