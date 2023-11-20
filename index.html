@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script type="module"  src="js/main.js" defer></script>
-    <script defer>
+    <script>
         function generuj(idecko){
             let element = document.getElementById(idecko);
 
@@ -28,20 +28,28 @@
             return final;
         }
 
-        let fakIn = document.getElementById("faktoral-cislo");
-        let fakBtn = document.getElementById("faktorial-pocitaj");
-        let fakVys = document.getElementById("faktorial-vysledok");
-        fakBtn.onclick = () => {
-            // ziskaj s inputu.value hodnotu
-            // vyrataj faktorial
-            // vloz vysledok do elementu pre zobrazenie vysledku
-        };
+        window.onload = () => {
+            let fakIn = document.getElementById("faktorial-cislo");
+            let fakBtn = document.getElementById("faktorial-pocitaj");
+            let fakVys = document.getElementById("faktorial-vysledok");
+            fakBtn.onclick = () => {
+                // ziskaj s inputu.value hodnotu
+                let cislo = fakIn.value;
+                // vyrataj faktorial
+                let vysledok = faktorial(cislo);
+                // vloz vysledok do elementu pre zobrazenie vysledku
+                fakVys.innerHTML = vysledok;
+            };
+        }
+
+
+
 
     </script>
 </head>
 <body>
 <div>
-    <input type="text" id="faktoral-cislo">
+    <input type="text" id="faktorial-cislo">
     <button id="faktorial-pocitaj">pocitaj</button>
     <div id="faktorial-vysledok"></div>
 </div>
