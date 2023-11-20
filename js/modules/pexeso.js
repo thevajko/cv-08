@@ -21,7 +21,7 @@ class Pexeso {
             new Player(2)
         ]
 
-        document.getElementById('start').addEventListener('click', function () {
+        document.getElementById('start').addEventListener('click', () => {
             this.newGame()
         })
     }
