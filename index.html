@@ -19,6 +19,15 @@
                 element.append(h1);
             }
         }
+
+        function faktorial(cislo){
+            if (cislo > 0) {
+                return cislo * faktorial(cislo -1);
+            }
+            return 1;
+        }
+
+
         window.addEventListener("load", () => generuj("score"));
 
     </script>
