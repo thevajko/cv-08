@@ -13,7 +13,9 @@
             let element = document.getElementById(id);
             for (let i = 0; i < 5; i++) {
                 let h1 = document.createElement("h1");
-                h1.innerText = "Nadpis " + i;
+                h1.innerHTML = "<span>Nadpis <i></i></span>";
+                let ii = h1.querySelector("i");
+                ii.innerText = i;
                 element.append(h1);
             }
         }
