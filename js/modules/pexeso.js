@@ -37,9 +37,19 @@ class Pexeso {
         Pexeso.cardSymbols.forEach(symbol => {
             for (let i = 0; i < 2; i++) {
                 let newCard = new Card(symbol)
+                //newCard.show()
                 this.#cards.push(newCard)
                 board.appendChild(newCard.element)
+                newCard.element.addEventListener('click', () => {
+                    this.turnCard()
+                })
             }
+
+            for (let i = 0; i < board.children.length * 5; i++) {
+                let number = Math.floor(Math.random() * board.children.length)
+                board.prepend(board.children.item(number))
+            }
+
         })
     }
 

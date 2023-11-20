@@ -35,7 +35,7 @@ class Card {
     }
 
     show() {
-        this.#element.innerHTML = `<i class="fas fa-${this.#symbol}" style="margin-top: 15px"></i>`
+        this.#element.innerHTML = `<i class="fas fa-${this.#symbol} fa-3x" style="margin-top: 15px"></i>`
     }
 
     hide() {
