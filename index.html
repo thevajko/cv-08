@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script type="module"  src="js/main.js" defer></script>
-    <script >
+    <script defer>
         function generuj(idecko){
             let element = document.getElementById(idecko);
 
@@ -18,11 +18,19 @@
                 element.append(h1);
             }
         }
-        document.addEventListener("onload", () => generuj("score"));
+
+        function faktorial(cislo) {
+
+        }
 
     </script>
 </head>
 <body>
+<div>
+    <input type="text" id="faktoral-cislo">
+    <button id="faktorial-pocitaj">pocitaj</button>
+    <div id="faktorial-vysledok"></div>
+</div>
 <div id="score">
     <div id="player1">
         Hráč 1:
