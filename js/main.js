@@ -1,3 +1,3 @@
-import {Pexeso} from "./modules/pesexo";
+import {Pexeso} from "./modules/pexeso.js";
 
 new Pexeso();
