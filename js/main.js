@@ -1,4 +1,3 @@
-import {Player} from "./modules/player.js";
+import {Pexeso} from "./modules/pesexo.js";
 
-document.p2 = new Player();
-document.p1 = new Player();
+document.pexeso = new Pexeso();
