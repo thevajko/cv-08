@@ -14,10 +14,14 @@ export class Pexeso {
     constructor() {
         this.#player1 = new Player();
         this.#player2 = new Player();
+
+        this.#player1.score = 100;
+        this.#player2.score = 1;
     }
 
     refreshScore(){
-
+        document.getElementById("player1_guessed").innerText = this.#player1.score;
+        document.getElementById("player2_guessed").innerText = this.#player2.score;
     }
 
 
