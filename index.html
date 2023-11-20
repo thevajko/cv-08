@@ -37,8 +37,11 @@
 
             btn.onclick = () => {
                 // ziskam hodnotu z inputu
+                let cislo = input.value;
                 // vyratam faktorial
+                let vysledok = faktorial(cislo);
                 // zapisem vysledok do result
+                result.innerText = vysledok;
             };
 
 
