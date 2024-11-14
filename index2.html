@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+<div id="vysledok"></div>
 <script>
     function factorial(num)  {
         if (num < 1) {
@@ -13,7 +14,8 @@
             return (num * factorial(num - 1));
         }
     }
-
+    let vysledok = document.getElementById('vysledok')
+    vysledok.innerText = factorial(5)
 </script>
 </body>
 </html>
