@@ -1,3 +1,6 @@
+import {Player} from "./player.js";
+import {Card} from "./card.js";
+
 class Pexeso {
 
     /**
@@ -76,3 +79,5 @@ class Pexeso {
         this.#currentPlayer = value;
     }
 }
+
+export {Pexeso}

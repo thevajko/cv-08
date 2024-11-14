@@ -5,6 +5,8 @@ class Card {
 
     constructor(symbol) {
         this.#symbol = symbol;
+        this.#element = document.createElement("div");
+        this.#element.setAttribute('style', 'text-align:center;')
     }
 
     get symbol() {
@@ -39,3 +41,5 @@ class Card {
         this.#element.innerHTML = ""
     }
 }
+
+export { Card };
