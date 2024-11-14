@@ -13,6 +13,21 @@ class Pexeso {
     #currentPlayer
 
 
+    constructor() {
+        this.#players = [
+            new Player(1),
+            new Player(2)
+        ];
+        // handle game restart button
+        document.getElementById("start").onclick = () => {
+            this.newGame();
+        }
+    }
+
+    newGame() {
+
+    }
+
     static get cardSymbols() {
         return this._cardSymbols;
     }
