@@ -6,8 +6,16 @@ function factorial(num) {
     }
 }
 
+function addHeaders(elementID){
+    let target = document.getElementById(elementID);
+    for (let i = 0; i < 5; i++) {
+        let h = document.createElement('h3');
+        h.innerText = "Nadpis č." + (i +1);
+        target.appendChild(h);
+    }
+}
+
 window.onload = function () {
-    let result = document.getElementById('result')
-    result.innerText = factorial(7)
+    addHeaders('headers')
 }
 
