@@ -5,6 +5,7 @@ class Card {
 
     constructor(symbol) {
         this.#symbol = symbol;
+        this.#element = document.createElement('div');
     }
 
     get symbol() {
@@ -29,6 +30,14 @@ class Card {
 
     set guessed(value) {
         this.#guessed = value;
+    }
+
+    show() {
+        this.#element.innerHTML = `<i class="fas fa-${this.#symbol} fa-3x" style="margin-top: 15px"></i>`;
+    }
+
+    hide() {
+        this.#element.innerHTML = '';
     }
 }
 
