@@ -5,6 +5,7 @@ class Card {
 
     constructor(symbol) {
         this.#symbol = symbol
+        this.#element = document.createElement("div");
     }
 
     get element() {
