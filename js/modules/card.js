@@ -24,15 +24,8 @@ class Card {
         return this.#guessed;
     }
 
-    /**
-     * If is set to true, opacity of card element will be changed to 30%
-     * @param value
-     */
     set guessed(value) {
         this.#guessed = value;
-        if (this.#guessed) {
-            this.#element.style.opacity = 0.3;
-        }
     }
 
     get symbol(){
