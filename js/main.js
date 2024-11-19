@@ -1,4 +1,4 @@
 import {Pexeso} from "./modules/pexeso.js";
 
-// run the game
+// create the game
 let pexeso = new Pexeso();

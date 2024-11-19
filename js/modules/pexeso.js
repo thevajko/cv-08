@@ -6,7 +6,7 @@ class Pexeso {
     /**
      * Array consists of icons in the game. If you want mode cards in the game, add them here
      */
-    static cardSymbols = ['truck-moving', 'tractor', 'truck-monster', 'truck', 'walking', 'ambulance', 'bicycle',
+    static cardSymbols = ['rocket', 'tractor', 'truck-monster', 'truck', 'walking', 'ambulance', 'bicycle',
         'bus', 'car', 'caravan', 'motorcycle', 'shuttle-van', 'tram', 'plane', 'subway'];
 
     // the card that picked as the first
@@ -42,6 +42,9 @@ class Pexeso {
         // score reset
         this.#players[0].score = 0;
         this.#players[1].score = 0;
+
+        // cards reset
+        this.#cards = [];
 
         // pick the second player
         this.#currentPlayer = this.#players[1];
@@ -83,7 +86,7 @@ class Pexeso {
      */
     switchPlayers() {
         // change colors and switch players
-        if (this.#currentPlayer == this.#players[0]) {
+        if (this.#currentPlayer === this.#players[0]) {
             document.getElementById("player1").style.color = "black";
             document.getElementById("player2").style.color = "green";
             this.#currentPlayer = this.#players[1];
@@ -110,14 +113,15 @@ class Pexeso {
 
         // turn up picked card
         card.show();
+        console.log(this.#cardOne, this.#cardTwo)
 
         if (this.#cardOne == null) {
             // it is just the first card
             this.#cardOne = card;
-            return;
-        } else {
+          // if the player clicked not on the same card
+        } else if (this.#cardOne !== card) {
             // if is the second one, check if cards match
-            if (this.#cardOne.symbol == card.symbol) {
+            if (this.#cardOne.symbol === card.symbol) {
                 // if matched, then set cards as guessed
                 this.#cardOne.guessed = true;
                 card.guessed = true;
@@ -145,7 +149,6 @@ class Pexeso {
             }
         }
     }
-
 }
 
 export {Pexeso};
