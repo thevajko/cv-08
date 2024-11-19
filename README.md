@@ -28,8 +28,8 @@ Momentálne je otvorená branch __MAIN__, ktorá obsahuje _štartér_. Riešenie
 
 
 2. Hra pexeso
-   Naprogramujte jednoduchú hru pexeso pre dvoch hráčov. Hráč, ktorý uhádne kartu, pokračuje v hre. Hra sa bude dať hrať
-   opakovane. Hra bude yobrayovať aj priebežné skóre.
+   Naprogramujte jednoduchú hru pexeso pre dvoch hráčov. Hráč, ktorý uhádne, pokračuje v hre, až kým neuhádne. Hra sa bude dať hrať
+   opakovane a bude zobrazovať aj priebežné skóre.
    * Hru riešte pomocou __OOP.__
    * Použite __JS moduly.__
 
