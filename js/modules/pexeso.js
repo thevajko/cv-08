@@ -69,9 +69,9 @@ class Pexeso {
                     this.#cardOne = null;
                     this.#cardTwo = null;
                 }, 1000);
-                // switch players after two cards were turned up
-                this.switchPlayers();
             }
+            // switch players after two cards were turned up
+            this.switchPlayers();
         }
     }
 }

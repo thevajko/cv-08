@@ -49,7 +49,8 @@ Postup:
    * Vytvorte metódu , ktorá bude prepínať hráčov.
    * Vytvorte metódu `turnCard()`, ktorá bude implementovať logiku odkrývania a skrývania kariet pri ťahu.
    * Nezabudnite importovať potrebné triedy `Player` a `Card`. Triedu `Pexeso` exportujte.
-5. V súbore `main.js` naimportujte modul `pexeso.js` a hru spustite.
+5. Momentálne sa hráči striedajú, aj keď hráč uhádne dvojicu. Upravte metódu `turnCard()` tak, aby ten istý hráč pokračoval, ak uhádne dvojicu.
+6. V súbore `main.js` naimportujte modul `pexeso.js` a hru spustite.
 
 
 ## Ako nájsť branch môjho cvičenia?
