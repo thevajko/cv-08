@@ -22,3 +22,5 @@ class Player {
         this.#score = value;
     }
 }
+
+export {Player}

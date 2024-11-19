@@ -39,3 +39,5 @@ class Card {
         this.#element.innerHTML = '';
     }
 }
+
+export {Card};
