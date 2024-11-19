@@ -5,11 +5,11 @@ Momentálne je otvorená branch __MAIN__, ktorá obsahuje _štartér_. Riešenie
 ## Úlohy
 
 1. Jednoduché úlohy
-   1. Vytvorte funkciu, ktorá bude schopná do vybraného elementu vygenerovať 5 nadpisov. V texte nadpisu sa bude
-      nachádzať jeho číslo.
-   2. Vytvorte funkciu na výpočet faktoriálu.
+   1. Vytvorte funkciu na výpočet faktoriálu.
       * Doplňte do stránky ovládacie prvky vstupné pole pre vloženie čísla, ktorého faktoriál chcete vypočítať a
         tlačidlo pre zobrazenie výsledku.
+   2. Vytvorte funkciu, ktorá bude schopná do vybraného elementu vygenerovať 5 nadpisov. V texte nadpisu sa bude
+      nachádzať jeho číslo.
 
 
 2. Hra pexeso
@@ -20,20 +20,21 @@ Momentálne je otvorená branch __MAIN__, ktorá obsahuje _štartér_. Riešenie
 
 Postup:
 1. Preštudujte si štruktúru štartéra projektu a hlavne súbory `index.html` a `css\style.css`.
-2. Vytvorte triedu `Player` s privátnymi atribútmi `number` a `score`. Vytvorte k nim _get_ a _set_ metódy. Vytvorte aj
-   konštruktor s parametrom `number`.
-3. Vytvorte triedu `Card`. Bude mať atribúty `symbol`, `element`, `guessed`. Vytvorte k nim _set_ a _get_ metódy.
+2. V triede `Player` v pripravenom súbore vytvorte privátne atribúty `number` a `score`. Vytvorte k nim _get_ a _set_ 
+   metódy. Vytvorte aj konštruktor s parametrom `number`. Triedu exportujte.
+3. V triede `Card` vytvorte privátne atribúty `symbol`, `element`, `guessed`. Vytvorte k nim _set_ a _get_ metódy.
    * Vytvorte konštruktor. Čo bude jeho parametrom?
    * Vytvorte a implementujte metódy `show()` a `hide()`, ktoré budú kartu odkrývať a skrývať.
+   * Triedu exportujte.
 4. Vytvorte triedu `Pexeso`.
    * Trieda bude mať privátne atribúty `cardOne`, `cardTwo`, `cards`, `players` a `currentPlayer`.
    * Vytvorte konštruktor. Čo bude jeho obsahom?
    * Vytvorte metódu `newGame()`. Čo bude metóda robiť?
    * Vytvorte metódu `switchPlayers()`, ktorá bude prepínať hráčov.
    * Vytvorte metódu `turnCard()`, ktorá bude implementovať logiku odkrývania a skrývania kariet pri ťahu.
+   * Nezabudnite importovať potrebné triedy `Player` a `Card`. Triedu `Pexeso` exportujte.
 5. Zmeňte implementáciu metódy `guessed()` v triede `Card`, tak, aby správne zaznamenala, či bola karta uhádnutá.
-6. Nastavte správne importy a exporty v jednotlivých súboroch. V súbore `main.js` naimportujte modul `pexeso.js` a hru
-   spustite.
+6. V súbore `main.js` naimportujte modul `pexeso.js` a hru spustite.
 
 
 ## Ako nájsť branch môjho cvičenia?

@@ -6,7 +6,8 @@ class Pexeso {
     /**
      * Array consists of icons in the game. If you want mode cards in the game, add them here
      */
-    static cardSymbols = ['yin-yang', 'tractor', 'truck-monster', 'truck', 'walking', 'ambulance', 'bicycle', 'bus', 'car', 'caravan', 'motorcycle', 'shuttle-van', 'tram', 'plane', 'subway'];
+    static cardSymbols = ['truck-moving', 'tractor', 'truck-monster', 'truck', 'walking', 'ambulance', 'bicycle',
+        'bus', 'car', 'caravan', 'motorcycle', 'shuttle-van', 'tram', 'plane', 'subway'];
 
     // the card that picked as the first
     #cardOne = null;
@@ -139,9 +140,9 @@ class Pexeso {
                     this.#cardOne = null;
                     this.#cardTwo = null;
                 }, 1000);
+                // switch players after two cards were turned up
+                this.switchPlayers();
             }
-            // switch players after two cards were turned up
-            this.switchPlayers();
         }
     }
 
