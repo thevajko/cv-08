@@ -1,6 +1,6 @@
 class Player {
     #number
-    #score
+    #score = 0
 
     constructor(number) {
         this.#number = number;
