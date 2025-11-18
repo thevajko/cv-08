@@ -16,9 +16,33 @@
                 return cislo * faktorial(cislo - 1);
             }
         }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const button = document.getElementById("button");
+            button.addEventListener("click", function() {
+                const cisloInput = document.getElementById("cislo");
+                const vysledokDiv = document.getElementById("vysledok");
+                const cislo = parseInt(cisloInput.value);
+                if (!isNaN(cislo) && cislo >= 0) {
+                    const vysledok = faktorial(cislo);
+                    vysledokDiv.textContent = `Faktorial čísla ${cislo} je ${vysledok}`;
+                } else {
+                    vysledokDiv.textContent = "Prosím zadajte platné nezáporné číslo.";
+                }
+            });
+        });
     </script>
 </head>
 <body>
+<div>
+    <label for="cislo">Cislo: </label>
+    <input type="text" id="cislo" name="cislo">
+    <button id="button">Vyrataj faktorial</button>
+    <div id="vysledok">
+        Vysledok
+    </div>
+</div>
+
 <div id="score">
     <div id="player1">
         Hráč 1:
