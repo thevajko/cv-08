@@ -17,12 +17,21 @@ class Pexeso {
             this.cards.push(new Card(symbol));
         });
 
+
+        for (let i = this.cards.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (this.cards.length));
+            [this.cards[i], this.cards[j]] = [this.cards[j], this.cards[i]];
+        }
+
+
         this.cards.forEach(card => {
             document.getElementById("board").appendChild(card.element);
         })
 
 
     }
+
+
 
     /**
      * Switch players, redraw score and change color of active player
@@ -94,4 +103,4 @@ class Pexeso {
     // }
 }
 
-export default Pexeso ;
+export default Pexeso;
