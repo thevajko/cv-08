@@ -7,23 +7,25 @@ class Card {
 
         this.turned = false;
 
-        this.element.onclick = () => {
-            this.turned = !this.turned;
-            if (this.turned) {
-                this.show();
-            } else {
-                this.hide();
-            }
-        }
+        // this.element.onclick = () => {
+        //     this.turned = !this.turned;
+        //     if (this.turned) {
+        //         this.show();
+        //     } else {
+        //         this.hide();
+        //     }
+        // }
 
     }
 
     show()  {
         this.element.innerHTML = this.symbol;
+        this.guessed = true;
     }
 
     hide() {
         this.element.innerHTML = '';
+        this.guessed = false;
     }
 }
 
