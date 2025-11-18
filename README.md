@@ -13,21 +13,6 @@ Momentálne je otvorená branch __MAIN__, ktorá obsahuje _štartér_. Riešenie
 
 
 2. Hra pexeso
-# VAII Cvičenie 08
-
-Momentálne je otvorená branch __MAIN__, ktorá obsahuje _štartér_. Riešenie obsahuje branch  __SOLUTION__.
-
-## Úlohy
-
-1. Jednoduché úlohy
-   1. Vytvorte funkciu na výpočet faktoriálu.
-      * Doplňte do stránky ovládacie prvky vstupné pole pre vloženie čísla, ktorého faktoriál chcete vypočítať a
-        tlačidlo pre zobrazenie výsledku.
-   2. Vytvorte funkciu, ktorá bude schopná do vybraného elementu vygenerovať 5 nadpisov. V texte nadpisu sa bude
-      nachádzať jeho číslo.
-
-
-2. Hra pexeso
    Naprogramujte jednoduchú hru pexeso pre dvoch hráčov. Hráč, ktorý uhádne, pokračuje v hre, až kým neuhádne. Hra sa bude dať hrať
    opakovane a bude zobrazovať aj priebežné skóre.
    * Hru riešte pomocou __OOP.__
