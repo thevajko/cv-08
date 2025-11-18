@@ -6,6 +6,19 @@ class Pexeso {
     static cardSymbols = ['rocket', 'tractor', 'truck-monster', 'truck', 'walking', 'ambulance', 'bicycle',
         'bus', 'car', 'caravan', 'motorcycle', 'shuttle-van', 'tram', 'plane', 'subway'];
 
+
+
+    constructor() {
+        this.cards = [];
+        Pexeso.cardSymbols.forEach(symbol => {
+            this.cards.add(new Card(symbol));
+            this.cards.add(new Card(symbol));
+        });
+
+
+
+    }
+
     /**
      * Switch players, redraw score and change color of active player
      */

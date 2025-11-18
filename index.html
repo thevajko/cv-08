@@ -8,40 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script type="module"  src="js/main.js" defer></script>
-    <script>
-        function faktorial(cislo) {
-            if (cislo <= 1) {
-                return 1;
-            } else {
-                return cislo * faktorial(cislo - 1);
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", function() {
-            const button = document.getElementById("button");
-            button.addEventListener("click", function() {
-                const cisloInput = document.getElementById("cislo");
-                const vysledokDiv = document.getElementById("vysledok");
-                const cislo = parseInt(cisloInput.value);
-                if (!isNaN(cislo) && cislo >= 0) {
-                    const vysledok = faktorial(cislo);
-                    vysledokDiv.textContent = `Faktorial čísla ${cislo} je ${vysledok}`;
-                } else {
-                    vysledokDiv.textContent = "Prosím zadajte platné nezáporné číslo.";
-                }
-            });
-        });
-    </script>
 </head>
 <body>
-<div>
-    <label for="cislo">Cislo: </label>
-    <input type="text" id="cislo" name="cislo">
-    <button id="button">Vyrataj faktorial</button>
-    <div id="vysledok">
-        Vysledok
-    </div>
-</div>
 
 <div id="score">
     <div id="player1">
