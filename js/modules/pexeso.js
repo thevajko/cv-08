@@ -5,6 +5,17 @@ class Pexeso {
      */
     static cardSymbols = ['rocket', 'tractor', 'truck-monster', 'truck', 'walking', 'ambulance', 'bicycle',
         'bus', 'car', 'caravan', 'motorcycle', 'shuttle-van', 'tram', 'plane', 'subway'];
+    constructor() {
+        this.cards = [];
+
+        for (let symbol of Pexeso.cardSymbols) {
+            this.cards.push(symbol);
+            this.cards.push(symbol);
+        }
+
+        this.cards.sort(() => Math.random() - 0.5);
+    }
+
 
     // /**
     //  * Switch players, redraw score and change color of active player
