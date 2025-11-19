@@ -1,4 +1,5 @@
 import Card from "./card.js";
+import Player from "./player.js";
 
 class Pexeso {
 
@@ -9,9 +10,12 @@ class Pexeso {
         'bus', 'car', 'caravan', 'motorcycle', 'shuttle-van', 'tram', 'plane', 'subway'];
     #cardTwo;
     #cardOne;
+    #currentPlayer;
+    #players;
 
     constructor() {
         this.cards = [];
+        this.#players = [new Player(1), new Player(2)];
 
         for (let symbol of Pexeso.cardSymbols) {
             this.cards.push(new Card(symbol));
@@ -31,25 +35,25 @@ class Pexeso {
     }
 
 
-    // /**
-    //  * Switch players, redraw score and change color of active player
-    //  */
-    // switchPlayers() {
-    //     // change colors and switch players
-    //     if (this.#currentPlayer === this.#players[0]) {
-    //         document.getElementById("player1").style.color = "black";
-    //         document.getElementById("player2").style.color = "green";
-    //         this.#currentPlayer = this.#players[1];
-    //     } else {
-    //         document.getElementById("player1").style.color = "green";
-    //         document.getElementById("player2").style.color = "black";
-    //         this.#currentPlayer = this.#players[0];
-    //     }
-    //     // update score
-    //     document.getElementById("player1_guessed").innerText = this.#players[0].score;
-    //     document.getElementById("player2_guessed").innerText = this.#players[1].score;
-    // }
-    //
+    /**
+     * Switch players, redraw score and change color of active player
+     */
+    switchPlayers() {
+        // change colors and switch players
+        if (this.#currentPlayer === this.#players[0]) {
+            document.getElementById("player1").style.color = "black";
+            document.getElementById("player2").style.color = "green";
+            this.#currentPlayer = this.#players[1];
+        } else {
+            document.getElementById("player1").style.color = "green";
+            document.getElementById("player2").style.color = "black";
+            this.#currentPlayer = this.#players[0];
+        }
+        // update score
+        document.getElementById("player1_guessed").innerText = this.#players[0].score;
+        document.getElementById("player2_guessed").innerText = this.#players[1].score;
+    }
+
     /**
      * Turn a card
      * @param card
@@ -79,7 +83,7 @@ class Pexeso {
                 this.#cardOne = null;
                 this.#cardTwo = null;
                 // increase player score
-            //    this.#currentPlayer.score += 1;
+                this.#currentPlayer.score += 1;
             } else {
                 // if the cards don't match, then set the second card
                 // player must not be able to select another card
@@ -96,7 +100,7 @@ class Pexeso {
                 }, 1000);
             }
             // switch players after two cards were turned up
-           // this.switchPlayers();
+            this.switchPlayers();
         }
     }
 }

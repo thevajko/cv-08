@@ -1,14 +1,25 @@
 class Player {
 
+    #number;
+    #score;
+    #element;
 
-    show(){
-        // turn up card (show its symbol)
-        this.#element.innerHTML = `<i class="fas fa-${this.#symbol} fa-3x" style="margin-top: 15px"></i>`;
-        this.#element.style.opacity = 0.3;
+
+    constructor(cislo) {
+        this.#score = 0;
+        this.#number = cislo;
+        this.#element = document.getElementById("player"+cislo+"_guessed");
     }
 
-    hide() {
-        this.#element.innerHTML = "";
-        this.#element.style.opacity = 1;
+
+    get score() {
+        return this.#score;
+    }
+
+    set score(value) {
+        this.#score = value;
+        this.#element.innerText = this.#score;
     }
 }
+
+export default Player;
