@@ -6,8 +6,27 @@ class Card {
     constructor(symbol) {
         this.#symbol = symbol;
         this.#guessed = false;
+        this.#element = document.createElement("div");
+        this.#element.onclick = () => {
+
+            this.#guessed = !this.#guessed;
+            if (this.#guessed) {
+                this.show();
+            } else {
+                this.hide();
+            }
+
+        }
     }
 
+
+    show() {
+        this.#element.innerText = this.#symbol;
+    }
+
+    hide() {
+        this.#element.innerText = "";
+    }
 
     get element() {
         return this.#element;

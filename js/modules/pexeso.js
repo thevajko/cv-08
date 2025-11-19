@@ -1,3 +1,5 @@
+import Card from "./card.js";
+
 class Pexeso {
 
     /**
@@ -9,11 +11,16 @@ class Pexeso {
         this.cards = [];
 
         for (let symbol of Pexeso.cardSymbols) {
-            this.cards.push(symbol);
-            this.cards.push(symbol);
+            this.cards.push(new Card(symbol));
+            this.cards.push(new Card(symbol));
         }
 
-        this.cards.sort(() => Math.random() - 0.5);
+        this.cards = this.cards.sort(() => Math.random() - 0.5);
+        this.cards.forEach(x => {
+                document.getElementById("board")
+                    .append(x.element)
+            }
+        );
     }
 
 
