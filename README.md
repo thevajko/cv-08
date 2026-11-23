@@ -2,25 +2,27 @@
 
 Momentálne je otvorená vetva __MASTER__, ktorá obsahuje _štartér_. Riešenie obsahuje vetva __SOLUTION__.
 
-## Úlohy
+## Zadanie
 
-Východiskom je aplikácia z cvičenia 07.
+Východiskom je aplikácia z cvičenia 07. Prezentáciu obrázkov vytvorte ako lightbox otvorený z domovskej stránky,
+nie ako samostatnú stránku.
 
-1. Vytvorte novú stránku **Slideshow** a pridajte na ňu odkaz do navigácie aplikácie.
-    1. V prezentácii zobrazte obrázky príspevkov z databázy.
-    2. Obrázok musí pokrývať celú viditeľnú plochu prehliadača aj pri zmene veľkosti okna. Zachovajte jeho pomer strán;
-       v prípade potreby sa môže časť obrázka orezať.
-    3. Pomocou JavaScriptu zabezpečte automatické striedanie obrázkov každých **n sekúnd**. Interval musí byť možné
-       jednoducho zmeniť.
-    4. Po poslednom obrázku pokračujte opäť prvým obrázkom. Ak neexistuje žiadny príspevok, zobrazte vhodnú správu;
-       pri jedinom obrázku ho ponechajte zobrazený.
-2. Doplňte manuálne ovládanie prezentácie.
-    1. Pridajte tlačidlá na zobrazenie predchádzajúceho a nasledujúceho obrázka. Prechod musí fungovať aj medzi prvým
-       a posledným obrázkom.
-    2. Umožnite prepínanie obrázkov aj pomocou klávesov šípka doľava a šípka doprava.
-    3. Po manuálnom prepnutí pokračujte v automatickom striedaní obrázkov.
+1. Na stranku s prispevkami pridajte tlačidlo **Slideshow**.
+2. Pripravte JavaScriptový súbor a vytvorte v ňom triedy `Slideshow` a `Slide`.
+3. Prilinkujte skript do aplikácie.
+4. Pripravte inicializáciu prezentácie, ktorá zo stránky načíta zoznam slajdov (na základe dát v HTML). Každý slajd obsahuje obrázok a jeho popis.
+5. Po kliknutí na tlačidlo **Slideshow** inicializujte prezentáciu: načítajte zoznam obrázkov a vytvorte z nich
+   slajdy. Použite HTML a CSS ukážky v súboroch `snippets/slideshow.html` a `snippets/slideshow.css` ako predlohu.
+   Pomocou JavaScriptu vytvorte lightbox a zobrazte v ňom prvý obrázok cez celú stránku.
+6. Pridajte obsluhu tlačidiel **Ďalej** a **Späť**, aby používateľ mohol prejsť na nasledujúci alebo predchádzajúci
+   obrázok. Zabezpečte prechod z posledného obrázka na prvý a opačne.
+7. Umožnite ovládanie prezentácie klávesnicou: šípkami doľava a doprava prepínajte obrázky a klávesom **Esc**
+   zatvorte lightbox.
+8. Doplňte automatické prepínanie obrázkov pomocou časovača. Nastavte interval tak, aby sa dal jednoducho zmeniť,
+   a po poslednom obrázku pokračujte prvým.
+9. Pri každom slajde zobrazte jeho popis.
 
-# Použitý framework
+## Použitý framework
 
-Cvičenie používa framework vaííčko dostupný na
-repe [https://github.com/thevajko/vaiicko](https://github.com/thevajko/vaiicko)
+Cvičenie používa framework vaííčko dostupný na repozitári
+[https://github.com/thevajko/vaiicko](https://github.com/thevajko/vaiicko).
