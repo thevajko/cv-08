@@ -4,7 +4,7 @@ Momentálne je otvorená vetva __MASTER__, ktorá obsahuje _štartér_. Riešeni
 
 ## Zadanie
 
-Východiskom je aplikácia z cvičenia 07. Prezentáciu obrázkov vytvorte ako lightbox otvorený z domovskej stránky,
+Východiskom je aplikácia z cvičenia 07. Prezentáciu obrázkov vytvorte ako lightbox otvorený zo stránky s príspevkami,
 nie ako samostatnú stránku.
 
 1. Na stranku s prispevkami pridajte tlačidlo **Slideshow**.
@@ -12,8 +12,8 @@ nie ako samostatnú stránku.
 3. Prilinkujte skript do aplikácie.
 4. Pripravte inicializáciu prezentácie, ktorá zo stránky načíta zoznam slajdov (na základe dát v HTML). Každý slajd obsahuje obrázok a jeho popis.
 5. Po kliknutí na tlačidlo **Slideshow** inicializujte prezentáciu: načítajte zoznam obrázkov a vytvorte z nich
-   slajdy. Použite HTML a CSS ukážky v súboroch `snippets/slideshow.html` a `snippets/slideshow.css` ako predlohu.
-   Pomocou JavaScriptu vytvorte lightbox a zobrazte v ňom prvý obrázok cez celú stránku.
+   slajdy. Podľa ukážok v súboroch `snippets/slideshow.html` a `snippets/slideshow.css` vytvorte celú HTML štruktúru
+   lightboxu pomocou JavaScriptu a zobrazte v ňom prvý obrázok cez celú stránku.
 6. Pridajte obsluhu tlačidiel **Ďalej** a **Späť**, aby používateľ mohol prejsť na nasledujúci alebo predchádzajúci
    obrázok. Zabezpečte prechod z posledného obrázka na prvý a opačne.
 7. Umožnite ovládanie prezentácie klávesnicou: šípkami doľava a doprava prepínajte obrázky a klávesom **Esc**

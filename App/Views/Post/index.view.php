@@ -11,13 +11,17 @@ use App\Configuration;
     <div class="row mb-4">
         <div class="col">
             <a href="<?= $link->url('post.add') ?>" class="btn btn-success">Pridať príspevok</a>
+            <?php if (count($posts) > 0) { ?>
+                <button type="button" class="btn btn-primary slideshow-open">Slideshow</button>
+            <?php } ?>
         </div>
     </div>
     <div class="row g-4 justify-content-center">
         <?php foreach ($posts as $post) { ?>
             <div class="col-auto mw-100">
                 <div class="card post h-100">
-                    <img src="<?= e($link->asset(Configuration::UPLOAD_URL . $post->getPicture())) ?>" class="card-img-top" alt="">
+                    <img src="<?= e($link->asset(Configuration::UPLOAD_URL . $post->getPicture())) ?>"
+                         class="card-img-top" alt="<?= e($post->getText() ?? '') ?>">
                     <div class="card-body">
                         <p class="card-text"><?= e($post->getText()) ?></p>
                     </div>
